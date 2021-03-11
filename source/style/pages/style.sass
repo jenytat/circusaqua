@@ -1,0 +1,1245 @@
+//fonts
+$flexy-bold: "Flexy Bold", sans-serif
+$flexy: "Flexy Sans", sans-serif
+$franklin: "franklin gothic", sans-serif
+$arial-bold: "Arial Bold", sans-serif
+$bookman: "Bookman", sans-serif
+// colors
+$header-color: #ffffff
+$hover-color: #e9cb03
+$yellow-color: #fff600
+$shadow-color: #8e0812
+body
+    font-family: $flexy
+.body-wrap
+    background: url(../images/decor/background.jpg) 50% 0% no-repeat
+    background-size: cover
+    overflow-x: hidden
+.wrapper
+    max-width: 1024px
+    width: 100%
+    margin: 0 auto
+.header__black
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    transition: all .4s ease-in-out
+    &.fixed
+        position: fixed
+        z-index: 10
+.header__top
+    padding: 29px 0
+.header__black
+    background: rgba($color-black, 0.7)
+.header__top > .wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+.header__phone
+    display: flex
+    align-items: center
+    & a
+        text-decoration: none
+        color: $header-color
+        transition: all .4s ease-in-out
+        &:hover
+            color: $hover-color
+        & span:first-child
+            font-size: 17px
+            font-weight: bold
+            line-height: 1.2
+            margin-right: 5px
+        & span:last-child
+            font-size: 31px
+            font-weight: bold
+            line-height: 1.2
+    & p
+        margin: 0
+        color: $color-white
+        font-size: 19px
+        color: $header-color
+        font-weight: bold
+        line-height: 1.2
+        padding-left: 10px
+.header__icons, .footer__social
+    display: flex
+    align-items: center
+    & a
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 32px
+        height: 32px
+        border-radius: 6px
+        overflow: hidden
+        margin-right: 10px
+        & svg
+            width: 100%
+            height: auto
+            & path:first-child
+                fill: $color-white
+                transition: all .4s ease-in-out
+            &:hover path:first-child
+                fill: $hover-color
+.header__city
+    display: flex
+    align-items: center
+    & p
+        margin: 0
+        font-size: 23px
+        font-weight: bold
+        line-height: 1.2
+        color: $color-white
+.select
+    min-width: 130px
+    margin-left: 12px
+    position: relative
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        width: 10px
+        height: 5px
+        background: url(../images/icon/city.png) no-repeat
+        background-size: contain
+        top: 50%
+        margin-top: -3px
+        right: 0
+    & select
+        outline: none
+        border: none
+        background: none
+        color: $color-white
+        font-size: 23px
+        font-family: $franklin
+        line-height: 1.2
+        display: block
+        width: 100%
+        appearance: none
+        &:hover
+            text-decoration: underline
+    & option
+        color: $color-black
+.menu, .header__menu
+    padding: 0px 0 20px 0
+    & ul, 
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        justify-content: space-between
+        align-items: center
+        & a
+            text-decoration: none
+            text-transform: uppercase
+            font-size: 13px
+            font-family: $franklin
+            color: $header-color
+            line-height: 0.942
+            text-align: center
+            max-width: 100px
+            transition: all .4s ease-in-out
+            display: block
+            &:hover
+                color: $hover-color
+.header__bottom
+    padding: 170px 0 12px 0
+    & > .wrapper
+        display: flex
+        align-items: center
+        justify-content: space-around
+.header__small
+    display: none
+.logo, .tickets
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-decoration: none
+.logo
+    max-width: 610px
+    & img
+        width: 100%
+        margin-bottom: 10px
+    & span
+        color: $color-white
+        font-size: 45px
+        font-family: $franklin
+        color: $header-color
+        line-height: 1.2
+        text-shadow: 0px 5px 17px rgba($color-black, 0.88)
+.tickets
+    max-width: 126px
+    & img
+        width: 100%
+        margin-bottom: 10px
+.tickets span
+    font-size: 24px
+    font-family: $arial-bold
+    color: $color-white
+    line-height: 1.039
+    display: block
+    text-align: center
+    text-shadow: 0px 5px 5px rgba($color-black, 0.75)
+.slider__wrap, .video__wrap
+    margin: 23px auto 0 auto
+    width: 100%
+    box-sizing: border-box
+    border: 3px solid $color-white
+    border-radius: 2px
+.slider__wrap
+    border: none
+.slider__slider, .photos__big, .video-slider__big
+    & .slick-next
+        z-index: 5
+        right: 15px
+        width: 29px
+        height: 59px
+        &::before
+            opacity: .5
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: url(../images/icon/arrow.png) no-repeat
+            background-size: contain
+            transition: all .4s ease-in-out
+        &:hover::before
+            opacity: 1
+    & .slick-prev
+        z-index: 5
+        left: 15px
+        width: 29px
+        height: 59px
+        &::before
+            opacity: .5
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: url(../images/icon/arrow.png) no-repeat
+            background-size: contain
+            transform: rotate(-180deg)
+            transition: all .4s ease-in-out
+        &:hover::before
+            opacity: 1
+.slick-dots li
+    width: 17px
+    height: 17px
+    border-radius: 50%
+    & button
+        width: 100%
+        height: 100%
+        padding: 0
+        &::before
+            content: ''
+            width: 100%
+            height: 100%
+            background: $color-white
+            border-radius: 50%
+            opacity: 1
+    &.slick-active button::before
+        background: #ffea00
+        opacity: 1
+.slider__slide
+    outline: none
+    border: 3px solid $color-white
+    position: relative
+    & img
+        width: 100%
+        display: block
+.slider__text
+    width: 50%
+    position: absolute
+    top: 60px
+    left: 68px
+    box-sizing: border-box
+    & h3
+        margin: 0
+        font-size: 85px
+        font-family: $franklin
+        color: $color-white
+        line-height: 0.859
+        background: url(../images/decor/slider-text.png) 0% 50% no-repeat
+        background-size: cover
+        padding-bottom: 48px
+    & p
+        margin: 0
+        color: $color-white
+        font-size: 26px
+        font-family: $franklin
+        line-height: 0.859
+        padding-bottom: 27px
+    & span 
+        font-size: 23px
+        color: $color-white
+        font-weight: bold
+        line-height: 0.859
+.slider__btn
+    margin-top: 56px
+    & a
+        text-decoration: none
+        font-size: 20px
+        outline: none
+        font-family: $franklin
+        color: #f9f4f6
+        line-height: 1.2
+        text-align: center
+        text-shadow: 0px 5px 21px rgba($color-black, 0.75)
+        padding: 12px 56px
+        box-sizing: border-box
+        transition: all .4s ease-in-out
+        background: linear-gradient(to bottom, #c13a73 36%, #760032 100%)
+        &:hover
+            box-shadow: 0px 4px 20px #EA5895
+        &:first-child
+            margin-right: 32px
+        &:last-child
+            padding: 12px 11px
+            border: 2px solid #ffffff
+            background: transparent
+.video
+    padding: 54px 0 0 0
+    & h2
+        margin: 0
+        & img
+            display: block
+            margin: 0 auto
+            width: 83%
+.video__wrap
+    position: relative
+    & video
+        width: 100%
+        display: block
+        position: relative
+.paused::after
+    content: ''
+    position: absolute
+    display: block
+    width: 120px
+    height: 120px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: url(../images/icon/icon-video.png) no-repeat
+    background-size: contain
+.poster, .photos, .video-slider, .feedback, .about, .text-block, .contacts, .audio, .feedback-text, .text
+    padding: 56px 0 0 0
+    & h2
+        margin: 0
+        font-size: 57px
+        font-family: $bookman
+        font-weight: bold
+        line-height: 1.1
+        color: $yellow-color
+        text-align: center
+        padding-bottom: 54px
+        text-transform: uppercase
+        -webkit-text-stroke: 1px #911610
+        text-shadow: 0px 0px 24px rgba(255, 0, 0, 0.95)
+.video
+    & h2
+        margin: 0
+        font-size: 57px
+        font-family: $bookman
+        font-weight: bold
+        line-height: 1.1
+        color: $yellow-color
+        text-align: center
+        padding-bottom: 54px
+        text-transform: uppercase
+        -webkit-text-stroke: 1px #911610
+        text-shadow: 0px 0px 24px rgba(255, 0, 0, 0.95)
+.poster__wrap
+    background: rgba($color-white, .3)
+    margin: 0 auto 54px auto
+    display: flex
+    align-items: stretch
+.poster__image
+    width: 58%
+    overflow: hidden
+    & img
+        width: 100%
+        display: block
+.poster__text
+    padding: 32px 15px 10px 15px
+    width: 42%
+    box-sizing: border-box
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    & h4 
+        margin: 0
+        text-align: center
+        font-size: 49px
+        font-family: $franklin
+        font-weight: normal
+        color: $color-white
+        line-height: 1.27
+        padding-bottom: 31px
+    & p
+        margin: 0
+        font-size: 31px
+        text-align: center
+        font-family: $franklin
+        color: $color-white
+        line-height: 0.9
+        padding-bottom: 16px
+    & span 
+        font-size: 33px
+        font-family: $flexy
+        color: $color-white
+        font-weight: bold
+        line-height: 0.9
+    & a
+        text-decoration: none
+        background: linear-gradient(180deg, #C34D7E 0%, #6F002F 100%)
+        text-decoration: none
+        font-size: 21px
+        font-family: $franklin
+        color: #f9f4f6
+        line-height: 1.2
+        text-align: center
+        text-shadow: 0px 5px 21px rgba(0, 0, 0, 0.75)
+        padding: 13px 42px
+        margin-top: 23px
+        box-sizing: border-box
+        transition: all .1s ease-in-out
+        &:hover
+            box-shadow: 0px 4px 20px #EA5895
+.poster__info, .feedback__info
+    margin: 0 auto
+    text-align: center
+    color: $color-white
+    font-size: 24px
+    font-family: $franklin
+    line-height: 1
+    max-width: 582px
+    & a
+        text-decoration: none
+        margin-left: 3px
+        color: $yellow-color
+        transition: all .4s ease-in-out
+        &:hover
+            text-decoration: underline
+.photos__slider, .video-slider__slider
+.photos__big, .video-slider__big
+    width: 100%
+    & .photos__slide, .video-slider__slide
+        width: 100%
+        outline: none
+        & img
+            display: block
+            width: 100%
+iframe
+    z-index: 1
+.video-slider__slide iframe
+    display: block
+    width: 100%
+    max-height: 672px
+.photos__small, .video-slider__small
+    margin-top: 34px
+    & .slick-prev
+        width: 40px
+        height: 40px
+        z-index: 5
+        left: -30px
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: url(../images/icon/arrow-left.png) no-repeat
+            background-size: contain
+            opacity: 1
+            transition: all .4s ease-in-out
+        &:hover::before
+            opacity: .5
+    & .slick-next
+        width: 40px
+        height: 40px
+        z-index: 5
+        right: -30px
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: url(../images/icon/arrow-right.png) no-repeat
+            background-size: contain
+            opacity: 1
+            transition: all .4s ease-in-out
+        &:hover::before
+            opacity: .5
+    & .photos__small-slide, .video-slider__small-slide
+        outline: none
+        & img
+            display: block
+            margin: 0 auto
+            width: 310px
+.video-slider__small-slide iframe
+    display: block
+    margin: 0 auto
+    width: 310px
+    max-height: 203px
+    pointer-events: none
+.feedback__item, .gallery-text
+    margin-top: 20px
+    background: rgba($color-black, .4)
+    box-sizing: border-box
+    padding: 23px 41px
+    & p
+        margin: 0
+        color: $color-white
+        font-size: 26px
+        font-family: $franklin
+        line-height: 1.1
+.feedback__info
+    max-width: 100%
+.about__wrap, .text-block__wrap
+    display: flex
+    align-items: stretch
+    background: rgba($color-black, .4)
+    margin-bottom: 40px
+.about__image, .text-block__image
+    width: 43%
+    & img
+        display: block
+        width: 100%
+.about__text, .text-block__text
+    width: 57%
+    box-sizing: border-box
+    padding: 50px 46px 10px 56px
+    & h3
+        margin: 0
+        color: $color-white
+        font-family: $franklin
+        font-size: 30px
+        padding-bottom: 17px
+    & p
+        margin: 0
+        color: $color-white
+        font-size: 18px
+        font-family: $franklin
+        padding-bottom: 22px
+        &:last-child
+            padding-bottom: 0
+.carnival
+    margin-bottom: 25px
+    &::last-child
+        margin-bottom: 0
+.carnival .text-block__text
+    justify-content: center
+    display: flex
+    flex-direction: column
+.contacts__wrap
+    width: 100%
+    display: flex
+    justify-content: space-between
+    background: rgba($color-black, 0.4)
+    box-sizing: border-box
+    padding: 14px 30px
+.contacts__map
+    max-width: 48.5%
+    width: 100%
+    & img
+        width: 100%
+        display: block
+.contacts__text
+    width: 100%
+    max-width: 51.5%
+    box-sizing: border-box
+    padding-left: 30px
+    display: flex
+    flex-direction: column
+    align-items: center
+    & p 
+        margin: 0
+        text-align: center
+        width: 100%
+        color: $color-white
+        font-size: 21px
+        font-family: $franklin
+        padding-bottom: 20px
+        & a
+            color: inherit
+            font-size: inherit
+            text-decoration: none
+            transition: all .4s ease-in-out
+            &:hover
+                color: $yellow-color
+    & a
+        font-size: 22px
+        line-height: 23px
+        color: $yellow-color
+        &:hover
+            text-decoration: none
+.contacts__links
+    margin-top: 27px
+    width: 100%
+    display: flex
+    flex-direction: column
+    & a
+        font-size: 18px
+        margin-bottom: 13px
+.contacts__info
+    margin-top: 10px
+    & h4
+        margin: 0
+        color: $color-white
+        font-size: 18px
+        padding-bottom: 4px
+        font-weight: normal
+        font-family: $franklin
+    & p
+        text-align: left
+        font-size: 15px
+.audio__wrap
+    max-width: 816px
+    width: 100%
+    margin: 0 auto
+    background: rgba($color-black, 0.4)
+    box-sizing: border-box
+    padding: 25px 42px
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    transition: all .4s ease-in-out
+    border: 5px solid transparent
+    & audio
+        display: none
+    &:hover
+        border-color: #A6416D
+    &:last-child
+        margin-bottom: 0
+    & button
+        outline: none
+        border-radius: 9px
+        width: 46px
+        height: 46px
+        border: none
+        box-shadow: 0px 0px 20px rgba($color-black, 0.8)
+        background: linear-gradient(132.09deg, #9C416C 8.59%, #473064 72.88%)
+        margin-right: 40px
+        position: relative
+        cursor: pointer
+        &::before
+            content: ''
+            position: absolute
+            background: url(../images/icon/pause.svg) no-repeat
+            background-size: contain
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 14px
+            height: 17px
+        &.play::before
+            content: ''
+            position: absolute
+            background: url(../images/icon/play.svg) no-repeat
+            background-size: contain
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 13px
+            height: 19px
+    & p
+        margin: 0
+        font-size: 30px
+        line-height: 34px
+        color: $color-white
+.feedback-text
+    width: 100%
+.feedback-text__info
+    margin-bottom: 24px
+    & p
+        margin: 0
+        text-align: center
+        font-size: 19px
+        font-family: $franklin
+        line-height: 1.8
+        color: $color-white
+.feedback-text__form
+    & h4
+        text-align: center
+        margin: 0
+        font-size: 37px
+        color: $yellow-color
+        font-weight: normal
+        line-height: 1
+        padding-bottom: 11px
+    & form
+        background: rgba($color-black, .4)
+        box-sizing: border-box
+        width: 100%
+        padding: 15px 30px
+        & span
+            color: $color-white
+            font-size: 14px
+            margin-top: -18px
+            display: block
+            padding-bottom: 21px
+            line-height: 1.4
+        & input[type="submit"]
+            outline: none
+            background: linear-gradient(180deg, #C34D7E 0%, #6F002F 100%)
+            border: none
+            text-decoration: none
+            font-size: 17px
+            font-family: $franklin
+            color: #f9f4f6
+            line-height: 1.2
+            text-align: center
+            text-shadow: 0px 5px 21px rgba(0, 0, 0, 0.75)
+            padding: 13px 31px
+            box-sizing: border-box
+            transition: all .4s ease-in-out
+            cursor: pointer
+            &:hover
+                box-shadow: 0px 4px 20px #EA5895
+.form-text__block
+    display: flex
+    flex-direction: column
+    margin-bottom: 29px
+    & label
+        color: $color-white
+        font-size: 23px
+        margin-bottom: 12px
+    & input[type="text"]
+        padding: 5px 10px
+        box-sizing: border-box
+        width: 362px
+        height: 27px
+        outline: none
+        border: none
+        background: #e1e1e1
+        box-shadow: inset 0px 11px 10px rgba(0, 0, 0, 0.4)
+    & textarea
+        background: #e1e1e1
+        box-shadow: inset 0px 11px 10px rgba(0, 0, 0, 0.4)
+        padding: 5px 10px
+        box-sizing: border-box
+        width: 100%
+        height: 262px
+        outline: none
+.form-text__block_row
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    & input[type="radio"]
+        display: none
+        &:checked + label::before
+            content: '\2022'
+            font-size: 60px
+            text-align: center
+            line-height: 18px
+            color: $color-black
+    & label
+        padding: 0 28px 10px 28px
+        position: relative
+        font-size: 16px
+        &:before
+            content: ''
+            position: absolute
+            border-radius: 50%
+            display: block
+            width: 16px
+            height: 16px
+            left: 0
+            top: 0
+            background: #e1e1e1
+.pages
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-top: 10px
+    & span
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 33px
+        height: 33px
+        background: rgba($color-black, .4)
+        color: $color-white
+        margin: 0 5px
+        font-size: 20px
+        font-family: $franklin
+        transition: all .4s ease-in-out
+        &:hover
+            color: $yellow-color
+            cursor: pointer
+        &.pages-active
+            color: $yellow-color
+.gallery-text
+    margin-top: 52px
+    & h3
+        margin: 0
+        color: $color-white
+        font-size: 22px
+    & p
+        font-size: 17px
+        padding-bottom: 44px
+        & a
+            color: $yellow-color
+            font-size: inherit
+            &:hover
+                text-decoration: none
+        &:last-child
+            padding-bottom: 0
+            & a
+                font-size: 19px
+.button-up
+    position: fixed
+    bottom: 45px
+    right: 45px
+    & img
+        opacity: .5
+        transition: all .4s ease-in-out
+        &:hover
+            opacity: 1
+.footer
+    background: rgba($color-black, 0.7)
+    margin-top: 130px
+    & > .wrapper
+        max-width: 804px
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 41px 0
+    & ul
+        width: 100%
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        & li
+            width: 49%
+            & a
+                text-decoration: none
+                color: $color-white
+                font-size: 26px
+                font-family: $franklin
+                line-height: 1.5
+                transition: all .4s ease-in-out
+                &:hover
+                    color: $yellow-color
+    & p
+        margin: 0
+        color: $color-white
+        font-size: 23px
+        font-family: $franklin
+        padding: 33px 0 4px 0
+        & a
+            text-decoration: none
+            color: $color-white
+            font-size: inherit
+            white-space: nowrap
+            transition: all .4s ease-in-out
+            &:hover
+                color: $yellow-color
+    & a
+        text-decoration: none
+        color: $yellow-color
+        font-size: 22px
+        font-family: $franklin
+        line-height: 1.5
+        &:hover
+            text-decoration: underline
+.footer__social
+    margin-top: 17px
+.footer__social a
+    width: 36px
+    height: 36px
+.header__mobile
+    display: none
+.header__mob-menu
+    padding: 10px 30px 
+    z-index: 10
+    position: absolute
+    top: 49px
+    right: 0
+    background: rgba($color-black, .7)
+    display: none
+    &.active-menu
+        display: block
+    & .header__city
+        flex-direction: column
+        & p
+            font-size: 18px
+        & .select select
+            font-size: 17px
+            text-align-last: center
+            text-align: center
+    & .menu
+        display: flex
+        justify-content: center
+        margin-top: 15px
+        padding: 0
+    & .menu ul
+        display: flex
+        flex-direction: column
+        & li
+            margin-bottom: 10px
+            & a 
+                font-size: 13px
+    & .header__icons
+        justify-content: center
+        & a
+            width: 21px
+            height: 21px
+            margin-right: 6px
+.header__icons.small
+    display: none
+.text__wrap
+    width: 100%
+    box-sizing: border-box
+    padding: 40px 28px
+    background: rgba($color-black, 0.4)
+    &.none
+        background: none
+    & h3 
+        margin: 0
+        padding-bottom: 29px
+        font-weight: normal
+        font-size: 30px
+        line-height: 34px
+        color: $color-white
+        font-family: $franklin
+    & p
+        margin: 0
+        color: $color-white
+        font-size: 20px
+        line-height: 23px
+        font-family: $franklin
+        padding-bottom: 25px
+        &:last-child
+            padding-bottom: 0
+@media(max-width: 1024px)
+    .header__small
+        display: block
+        padding: 24px 0
+        & > .wrapper
+            display: flex
+            justify-content: space-around
+            align-items: center
+    .header__top, .menu
+        display: none
+    .header__small .header__phone, .header__small  .header__city
+        flex-direction: column
+        align-items: flex-start
+        & p
+            padding-left: 0
+    .header__small .header__phone
+        & span:first-child
+            font-size: 14px
+        & span:last-child
+            font-size: 23px
+        & p
+            font-size: 14px
+    .header__menu
+        padding: 0
+        width: 68%
+        & ul a
+            font-size: 10px
+            margin: 0 3px
+            max-width: 82px
+    .header__small .header__city
+        & p
+            font-size: 19px
+    .select
+        margin-left: 0
+        & select
+            font-size: 19px
+    .header__bottom
+        padding: 131px 0 12px 0
+    .header__icons.small
+        display: flex
+        position: absolute
+        left: 0
+        top: 117px
+        flex-direction: column
+        & a
+            margin: 0 0 9px 0
+            width: 25px
+            height: 25px
+    .tickets
+        position: absolute
+        right: 0
+        top: 117px
+        & img
+            width: 85px
+        & span
+            font-size: 17px
+    .slider__wrap
+        max-width: 903px
+        width: 100%
+        margin: 0 auto
+    .slider__text
+        width: 65%
+        top: 52px
+        left: 59px
+        & h3
+            font-size: 76px
+            padding-bottom: 38px
+        & p
+            font-size: 23px
+            padding-bottom: 13px
+        & span
+            font-size: 20px
+    .slider__btn
+        margin-top: 42px
+    .photos__small .slick-next, .video-slider__small .slick-next
+        right: 0
+    .photos__small .slick-prev, .video-slider__small .slick-prev
+        left: 0
+@media(max-width: 991px)
+    .poster__wrap, .about__wrap, .text-block__wrap
+        flex-direction: column
+        max-width: 480px
+        width: 100%
+    .poster__text, .poster__image, .about__image, .about__text, .text-block__image, .text-block__text
+        width: 100%
+    .about__wrap
+        margin: 0 auto
+    .carnival
+        margin: 0 auto 25px auto
+    .text-block__wrap
+        margin: 0 auto 15px auto
+@media(max-width: 828px)
+    .header__small, .tickets, .header__icons.small
+        display: none
+    .header__mobile
+        padding: 10px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        & button
+            outline: none
+            background: none
+            border: none
+            cursor: pointer
+    .header__tickets
+        display: flex
+        align-items: center
+        text-decoration: none
+        & img
+            display: block
+            width: 48px
+            margin-right: 5px
+        & span
+            font-size: 20px
+            color: $color-white
+            font-weight: bold
+            line-height: 1
+    .logo
+        max-width: 86%
+        & span
+            font-size: 38px
+    .header__bottom
+        padding: 58px 0 12px 0
+    .menu ul a
+        max-width: 100%
+    .slider__text 
+        width: 100%
+        height: 70%
+        display: flex
+        flex-direction: column
+        top: 28px
+        & h3
+            font-size: 55px
+            padding-bottom: 17px
+        & p
+            font-size: 17px
+            padding-bottom: 9px
+        & span 
+            font-size: 15px
+            flex: 1 0 auto
+    .video
+        padding: 20px 0 0 0
+    .poster, .photos, .video-slider, .feedback, .about, .text-block, .contacts, .audio, .feedback-text, .text
+        padding: 62px 0 0 0
+    .photos__small, .video-slider__small
+        display: none
+    .contacts__wrap
+        flex-direction: column
+    .contacts__map, .contacts__text
+        max-width: 100%
+    .contacts__text
+        padding: 25px 0 
+@media(max-width: 556px)
+    .body-wrap
+        background: url(../images/decor/mob-back.png) 50% 50% no-repeat
+        background-size: cover
+    .wrapper
+        box-sizing: border-box
+        max-width: calc(100% - 40px)
+    .logo span
+        font-size: 17px
+    .header__mob-menu  .menu ul li a
+        font-size: 15px
+    .slider__slide
+        border: none
+    .slider__slider .slick-prev, .photos__big .slick-prev, .video-slider__big .slick-prev
+        width: 15px
+        height: 26px
+        left: 3px
+    .slider__slider .slick-next, .photos__big .slick-next, .video-slider__big .slick-next
+        width: 15px
+        height: 26px
+        right: 3px
+    .slider__text
+        width: 100%
+        top: 25px
+        left: 3px
+        & h3
+            font-size: 27px
+            width: 50%
+            padding-bottom: 6px
+            padding-left: 25px
+        & p
+            padding-left: 25px
+            font-size: 13px
+            padding-bottom: 0
+        & span
+            padding-left: 25px
+            font-size: 10px
+    .slider__btn
+        margin-top: 13px
+        margin-left: 25px
+        & a
+            padding: 7px 18px
+            font-size: 14px
+            &::before
+                width: 90px
+                height: 37px
+                top: -21px
+                right: -28px
+            &::after
+                width: 90px
+                height: 37px
+                bottom: -20px
+                left: -23px
+            &:first-child
+                margin-right: 10px
+            &:last-child
+                padding: 6px 2px
+    .slick-dots
+        bottom: -16px
+    .slick-dots li
+        width: 7px
+        height: 7px
+    .video
+        padding: 0
+    .paused::after
+        display: none
+    .slider__wrap, .video__wrap
+        margin-top: 12px
+        border: none
+    .paused
+        &::after
+            width: 42px
+            height: 42px
+    .poster, .photos, .video-slider, .feedback, .about, .text-block, .contacts, .audio, .feedback-text, .text
+        padding: 25px 0 0 0
+        & h2
+            font-size: 24px
+            padding-bottom: 17px
+    .video
+        & h2
+            font-size: 24px
+            padding-bottom: 17px
+    .poster__wrap
+        margin: 0 auto 20px auto
+    .reverse
+        flex-direction: column-reverse
+    .poster__text
+        padding: 11px 15px 10px 15px
+        height: 187px
+        & h4
+            font-size: 30px
+            padding-bottom: 0
+        & p
+            font-size: 19px
+            padding-bottom: 9px
+        & span
+            font-size: 24px
+        & a
+            padding: 7px 18px
+            font-size: 16px
+            margin-top: 13px
+            &::before
+                width: 90px
+                height: 37px
+                top: -21px
+                right: -28px
+            &::after
+                width: 90px
+                height: 37px
+                bottom: -20px
+                left: -23px
+    .poster__info, .feedback__info
+        font-size: 14px
+        margin-top: 5px
+    .feedback__info
+        box-sizing: border-box
+        padding: 0 20px
+    .feedback__item, .gallery-text
+        margin-top: 10px
+        padding: 11px 18px
+        & p
+            font-size: 18px
+    .about__text, .text-block__text
+        padding: 19px 12px
+        & p 
+            font-size: 16px
+            padding-bottom: 18px
+    .text__wrap 
+        padding: 36px 17px
+        & p 
+            font-size: 13px
+    .about__text h3, .text-block__text h3, .text__wrap h3
+        font-size: 23px
+        padding-bottom: 14px
+    .audio__wrap
+        padding: 10px 1px
+        & button
+            margin-right: 17px
+        & p
+            font-size: 18px
+    .form-text__block input[type="text"]
+        width: 100%
+    .contacts__wrap
+        padding: 0
+    .contacts__text
+        padding: 25px 20px 0 20px
+    .footer
+        margin-top: 55px
+        & > .wrapper
+            padding: 16px 0
+        & p
+            text-align: center
+            padding: 19px 0 0 0
+            margin-top: 21px
+            font-size: 20px
+            border-top: 2px solid $color-white
+    .footer ul li
+        width: 100%
+        display: flex
+        justify-content: center
+        & a
+            font-size: 20px
+            text-align: center
+    .button-up
+        right: 10px
